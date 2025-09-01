@@ -1,26 +1,69 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import TitleScreen from "./components/TitleScreen";
+import QuizScreen from "./screens/QuizScreen";
+import SummaryScreen from "./screens/SummaryScreen";
+import { prepareQuiz } from "./utils/prepareQuiz";
+import { QUESTION_BANK } from "./data/questions";
+import type { Question, Settings } from "./types/quiz";
+import { DEFAULT_SETTINGS } from "./types/quiz";
 
-function App() {
+
+export default function App({
+  bank = QUESTION_BANK,
+  defaultSettings = DEFAULT_SETTINGS,
+}: {
+bank?: Question[];
+  defaultSettings?: Settings;
+}) {
+  type Stage = "title" | "quiz" | "summary";
+  const [stage, setStage] = useState<Stage>("title");
+  const [settings, setSettings] = useState<Settings>(defaultSettings);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [lastResult, setLastResult] = useState<{ correctCount: number; total: number } | null>(null);
+  
+  
+  const startQuiz = (s: Settings) => {
+    const prepared = prepareQuiz(bank, s);
+    setSettings(s);
+    setQuestions(prepared);
+    setLastResult(null);
+    setStage("quiz");
+  };
+  
+  
+  const finishQuiz = (res: { correctCount: number; total: number }) => {
+    setLastResult(res);
+    setStage("summary");
+  };
+  
+  
+  const backToTitle = () => setStage("title");
+  
+  
+  const retry = () => {
+    const prepared = prepareQuiz(bank, settings);
+    setQuestions(prepared);
+    setLastResult(null);
+    setStage("quiz");
+  };
+
+
+  if (stage === "title") {
+    return <TitleScreen onStart={startQuiz} bankSize={bank.length} defaultSettings={defaultSettings} />;
+  }
+
+
+  if (stage === "quiz") {
+    return <QuizScreen questions={questions} onFinish={finishQuiz} />;
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SummaryScreen
+      correctCount={lastResult?.correctCount ?? 0}
+      total={lastResult?.total ?? 0}
+      onRetry={retry}
+      onBackToTitle={backToTitle}
+    />
   );
 }
-
-export default App;
