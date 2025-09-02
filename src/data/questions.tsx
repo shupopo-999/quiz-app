@@ -41,7 +41,7 @@ export const QUESTION_BANK: Question[] = [
             { id: "q3o5", text: ":set -o" },
         ],
         correctOptionIds: ["q3o2","q3o4"],
-        explanation: "「:set~」で、さまざまなコマンドを実行できる。\n:set autoindent ... 自動インデント(省略形:ai)\n:set number.....行番号の表示(省略形:nu)\n:set tabstop=4 .... タプ幅の設定(省略形:ts=4)",
+        explanation: "「:set~」で、さまざまなコマンドを実行できる。<br/>:set autoindent ... 自動インデント(省略形:ai)\n:set number.....行番号の表示(省略形:nu)\n:set tabstop=4 .... タプ幅の設定(省略形:ts=4)",
         meta: { category: "web", difficulty: "normal" },
     },
     {
@@ -54,7 +54,7 @@ export const QUESTION_BANK: Question[] = [
             { id: "q4o4", text: "5dd" },
             { id: "q4o5", text: "5XX" }
         ],
-        correctOptionIds: [],
+        correctOptionIds: ["q4o4"],
         explanation: "",
         meta: { category: "cb41", difficulty: "normal" },
     },
@@ -82,8 +82,34 @@ export const QUESTION_BANK: Question[] = [
             { id: "q6o4", text: "l…カーソルを下へ移動" }
         ],
         correctOptionIds: ["q6o3"],
-        explanation: "[解説]\n vi には、コマンドモードと入カモードの2種類があります。\n入力モードは、ファイルに文字を入力する際に利用するモードです。一方、コマンドモードはファイルのカーソル\n 移動や、コピーペースト、変更した内容の保存などを行うモードです。\n 今回例題で問われているのは、カーソル移動に関するvi コマンドです。カーソル移動を行うためのvi コマンド\n には以下のような種類があります。\n 1:カーソルを右へ移動\n h :カーソルを左へ移動\n k :カーソルを上へ移動\n j:カーソルを下へ移動\n gg:カーソルをファイルの先頭行に移動\n G : カーソルをファイルの最終行へ移動",
+        explanation: '[解説]\n vi には、コマンドモードと入カモードの2種類があります。\n入力モードは、ファイルに文字を入力する際に利用するモードです。一方、コマンドモードはファイルのカーソル\n 移動や、コピーペースト、変更した内容の保存などを行うモードです。\n 今回例題で問われているのは、カーソル移動に関するvi コマンドです。カーソル移動を行うためのvi コマンド\n には以下のような種類があります。\n 1:カーソルを右へ移動\n h :カーソルを左へ移動\n k :カーソルを上へ移動\n j:カーソルを下へ移動\n gg:カーソルをファイルの先頭行に移動\n G : カーソルをファイルの最終行へ移動',
         meta: { category: "cb41", difficulty: "normal" },
     },
-
+    {
+        id: "q7",
+        prompt: "以下のコマンドの中で、引数無しで実行した場合にファイルの先頭から10行だけを表示するものはどれか。",
+        options: [
+            { id: "q7o1", text: "head" },
+            { id: "q7o2", text: "cat" },
+            { id: "q7o3", text: "tac" },
+            { id: "q7o4", text: "n1" },
+            { id: "q7o5", text: "tail" }
+        ],
+        correctOptionIds: ["q7o1"],
+        explanation: "",
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q8",
+        prompt: "カーソルのある行以下3行を削除するコマンドを1つ選択してください。",
+        options: [
+            { id: "q8o1", text: "3yy" },
+            { id: "q8o2", text: "3dd" },
+            { id: "q8o3", text: "3x" },
+            { id: "q8o4", text: "3p" }
+        ],
+        correctOptionIds: ["q8o2"],
+        explanation: "",
+        meta: { category: "cb41", difficulty: "normal" },
+    },
 ];

@@ -67,3 +67,16 @@ bank?: Question[];
     />
   );
 }
+
+export function Explanation({ text }: { text: string }) {
+  return (
+    <>
+      {text.split("\n").map((line, i) => (
+        <span key={i}>
+          {line}
+          <br />
+        </span>
+      ))}
+    </>
+  );
+}
