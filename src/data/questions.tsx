@@ -696,5 +696,247 @@ export const QUESTION_BANK: Question[] = [
                     ファイルを絶対パスで指定する」が正解となります。`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
-
+    {
+        id: `q31`,
+        prompt: `以下の内容が書かれたファイル(text.txt)を検索して、TEXT00 の後ろに続く文字が1~5の行を出力させる正\n
+                しいコマンドを選択してください。\n
+                text.txt\n
+                    TEXT001\n
+                    TEXT002\n
+                    TEXT003\n
+                    TEXT004\n
+                    TEXT005\n
+                    TEXT006\n
+                    TEXT007\n
+                    TEXT008\n
+                    TEXT009\n
+                    TEXT010`,
+        options: [
+            { id: `q31o1`, text: `grep \"TEXT00[1 5]\" text.txt` },
+            { id: `q31o2`, text: `cat text.txt | grep [1-5]` },
+            { id: `q31o3`, text: `cat text.txt | grep [12345]` },
+            { id: `q31o4`, text: `grep \"TEXT00[1-5]\" text.txt` }
+        ],
+        correctOptionIds: ["q31o4"],
+        explanation: `[解説]\n
+                    []はカッコ内に入力されたいずれかの文字でマッチさせる正規表現です。以下のようにーと組み合わせることで範囲を指定して検索することができます。\n
+                    範囲指定の一例\n
+                    [0-9] : 数字の0から9にマッチする行を出力する\n
+                    [a-z] : 英字のaからzにマッチする行を出力する\n
+                    [A-Z] : 英字のAからZにマッチする行を出力する\n
+                    [0-9a-z] : 数字の0から9と英字のaからzにマッチする行を出力する\n
+                    [0-9A-Z] : 数字の0から9と英字のAからZにマッチする行を出力する\n
+                    また、[]の中に並べて文字を入力することで、それぞれにマッチする行を出力することもできます。\n
+                    [134] : 数字の1、3、4にマッチする行を出力する\n
+                    [ace] : 英字のa、c、eにマッチする行を出力する`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q32`,
+        prompt: `ログファイル「/var/log/message」への追記分を、リアルタイムに表示できるコマンドを選択してください。`,
+        options: [
+            { id: `q32o1`, text: `head -f /var/log/message` },
+            { id: `q32o2`, text: `less /var/log/message` },
+            { id: `q32o3`, text: `cat /var/log/message` },
+            { id: `q32o4`, text: `tail -f /var/log/message` }
+        ],
+        correctOptionIds: ["q32o4"],
+        explanation: `[解説]\n
+                    tail コマンドは、ファイルの末尾から引数で指定された一部を出力するコマンドです。\n
+                    デフォルトではファイルの末尾から10行分が出力されます。オプションを指定することで、出力する行数や文字\n
+                    数を指定することもできます。\n
+                    利用できる主なオプションは以下の通りです。\n
+                    -c:引数に指定したバイト数を出力します\n
+                    -n:引数に指定した行数を出力します\n
+                    -f:ファイルに追記されたデータを出力します\n
+                    -q:ファイル名を表示しません\n
+                    -v:常にファイル名を表示します`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q33`,
+        prompt: `/home/testuser/srcdirというディレクトリを、/tmpディレクトリにコピーしたい。\n
+                srcdirディレクトリのタイムスタンプを変えずに、srcdir ディレクトリ配下のディレクトリやファイルも含め\n
+                てコピーできるコマンドをーつ選択してください。`,
+        options: [
+            { id: `q33o1`, text: `cp -rp /home/testuser/srcdir /tmp/` },
+            { id: `q33o2`, text: `cp -r /home/testuser/srcdir /tmp/` },
+            { id: `q33o3`, text: `cp -i /home/testuser/srcdir /tmp/` },
+            { id: `q33o4`, text: `cp -ri /home/testuser/srcdir /tmp/` }
+        ],
+        correctOptionIds: ["q33o1"],
+        explanation: `[解説]\n
+                    cp コマンドは、ファイルやディレクトリのコピーを行うコマンドです。\n
+                    書式は以下の通りです。\n
+                        cp [オプション] SOURCE DEST\n
+                        SOURCE から DEST へのコピーが行われます。\n
+                    -r オプションを指定することで、サブディレクトリやファイルも含め、再帰的にディレクトリ全体をコピーする\n
+                    ことができます。\n
+                    また、-pオプションを指定することで、タイムスタンプもコピーすることができます。なお、ルートユーザで実\n
+                    行した場合には、権限、所有者、所有グループもコピーすることができます。\n
+                    オプションは、「-rp」のようにまとめて指定することが可能です。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q34`,
+        prompt: `次の選択肢の中で、/home/user/test.txt というファイルを/home/backup ディレクトリに移動できないコ\n
+                マンドを選択してください。`,
+        options: [
+            { id: `q34o1`, text: `mv -r /home/user/test.txt /home/backup/` },
+            { id: `q34o2`, text: `mv -t /home/backup/ /home/user/test.txt` },
+            { id: `q34o3`, text: `mv -i /home/user/test.txt /home/backup/` },
+            { id: `q34o4`, text: `mv -n /home/user/test.txt /home/backup/` }
+        ],
+        correctOptionIds: ["q32o1"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q35`,
+        prompt: `リダイレクトについて適切な説明を選択してください。`,
+        options: [
+            { id: `q35o1`, text: `「cat く test.txt」は、標準出力をtest.txtに書き込んでいる` },
+            { id: `q35o2`, text: `「 rm a.txt 2>test.txt」は、標準エラーをtest.txtに書き込んでいる` },
+            { id: `q35o3`, text: `「 echo hello >test.txt」は、標準出力をtest.txtに書き込んでいる` },
+            { id: `q35o4`, text: `「 ls > test.txt」は、標準出力をtest.txtに書き込んでいる` }
+        ],
+        correctOptionIds: ["q35o4"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q36`,
+        prompt: `以下のテキストファイル test.txt の中に書かれている「1evel」という文字をすべて「Level」に置き換える\n
+                    ためのコマンドで正しいものを1つ選択してください。`,
+        options: [
+            { id: `q36o1`, text: `sed s/level/Level/ test.txt` },
+            { id: `q36o2`, text: `sed s/level/Level/g test.txt` },
+            { id: `q36o3`, text: `sed y/level/Level/ test.txt` },
+            { id: `q36o4`, text: `sed y/level/Level/g test.txt` }
+        ],
+        correctOptionIds: ["q36o2"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q37`,
+        prompt: `標準エラー出力のみをerror.txtに書き込むためのコマンドで正しいものを1つ選択してください。`,
+        options: [
+            { id: `q37o1`, text: `find / -name \`*.conf\` 2> error.txt` },
+            { id: `q37o2`, text: `find / -name \`*.conf\` > error.txt` },
+            { id: `q37o3`, text: `find / -name \`*.conf\` >> error.txt` },
+            { id: `q37o4`, text: `find / -name \`*.conf\` > error.txt 2>&1` }
+        ],
+        correctOptionIds: ["q37o1"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q38`,
+        prompt: `Apache Web サーバを管理している。HTTP アクセスの失敗した記録を見るには、どのログファイルを参照すれば\n
+                よいか?`,
+        options: [
+            { id: `q38o1`, text: `/var/log/messages` },
+            { id: `q38o2`, text: `/var/log/xferlog` },
+            { id: `q38o3`, text: `/var/log/secure` },
+            { id: `q38o4`, text: `/var/log/httpd/access_log` },
+            { id: `q38o5`, text: `/var/log/httpd/error_log` }
+        ],
+        correctOptionIds: ["q38o5"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q39`,
+        prompt: `Apache の設定を行っている。ドキュメントルートディレクトリを/var/www/html に設定していたが、これを\n
+                /var/newに変更するため、httpd.conf を書き換えた。\n
+                その後プラウザからアクセスしてみたが、もとのドキュメントルート内のコンテンツが表示される。設定が正常に\n
+                書き換えられているものとして、考えられる原因はどれか?(2つ選択)`,
+        options: [
+            { id: `q39o1`, text: `Apacheを再起動していない` },
+            { id: `q39o2`, text: `/var/newのパーミッション設定に誤りがある` },
+            { id: `q39o3`, text: `srm.confも合わせて書き換える必要がある` },
+            { id: `q39o4`, text: `ブラウザのキャッシュが有効になっている` },
+            { id: `q39o5`, text: `/varのパーミッション設定に誤りがある` }
+        ],
+        correctOptionIds: ["q39o1", "q39o4"],
+        explanation: `Apacheを再起動していない場合、設定が反映されません。また、ブラウザのキャッシュが有効になっていると、古いコンテンツが表示されることがあります。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q40`,
+        prompt: `Apache HTTPD で、BASIC 認証によるアクセス制御を実施するため、.htaccess ファイルを編集している。以\n
+                下は設定の一部である。空欄に当てはまるディレクティブはどれか?\n
+                Basic\n
+                AuthName "Restricted Area"\n
+                AuthUserFile /etc/httpd/conf/.htpasswd`,
+        options: [
+            { id: `q40o1`, text: `AuthType` },
+            { id: `q40o2`, text: `AccessFormat` },
+            { id: `q40o3`, text: `AccessType` },
+            { id: `q40o4`, text: `Require` },
+            { id: `q40o5`, text: `AuthProto` }
+        ],
+        correctOptionIds: ["q40o1"],
+        explanation: `BASIC 認証を設定するためには、AuthType ディレクティブを使用して認証方式を指定する必要があります。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q41`,
+        prompt: `ネットマスクの説明として間違っているものを選びなさい。`,
+        options: [
+            { id: `q41o1`, text: `ネットマスクは32ビットの値である` },
+            { id: `q41o2`, text: `IPアドレスのうち、どこまでがネットワーク部にあたるかを表す` },
+            { id: `q41o3`, text: `IPアドレスとOR演算を行うことでネットワークアドレスを算出できる` },
+            { id: `q41o4`, text: `クラスCの標準的なネットマスクは24ビットである` },
+        ],
+        correctOptionIds: ["q41o1"],
+        explanation: `ネットマスクは、IPアドレスのネットワーク部を示すために使用される32ビットの値です。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q42`,
+        prompt: `192.168.3.0 というネットワークで、サブネットマスクが255.255.255.128 であるとき、このネットワーク\n
+                の最大ホスト数はいくつか?`,
+        options: [
+            { id: `q42o1`, text: `172` },
+            { id: `q42o2`, text: `126` },
+            { id: `q42o3`, text: `255` },
+            { id: `q42o4`, text: `125` },
+            { id: `q42o5`, text: `128` }
+        ],
+        correctOptionIds: ["q42o2"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q43`,
+        prompt: `ネットワークアドレスが 192.168.4.32,サブネットマスクが255.255.255.240 のとき、コンピュータ等の\n
+                機器に割り当ててはいけない IP アドレスはどれか?該当するものをすべて選択せよ。`,
+        options: [
+            { id: `q43o1`, text: `192.168.4.32` },
+            { id: `q43o2`, text: `192.168.4.33` },
+            { id: `q43o3`, text: `192.168.4.39` },
+            { id: `q43o4`, text: `192.168.4.40` },
+            { id: `q43o5`, text: `192.168.4.47` }
+        ],
+        correctOptionIds: ["q43o1", "q43o5"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q44`,
+        prompt: `IPアドレスが 172.16.124.160、サブネットマスクが 255.255.255.0 のホストがある。このホストが属す\n
+                るネットワークのネットワークアドレスを表しているのはどれか?`,
+        options: [
+            { id: `q44o1`, text: `172` },
+            { id: `q44o2`, text: `172.16.124.0` },
+            { id: `q44o3`, text: `255.255.255.0` },
+            { id: `q44o4`, text: `172.16.124.255` },
+            { id: `q44o5`, text: `127.0.0.1` }
+        ],
+        correctOptionIds: ["q44o2"],
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
+    }
 ];
