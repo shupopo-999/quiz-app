@@ -84,7 +84,7 @@ export const QUESTION_BANK: Question[] = [
     },
     {
         id: "q6",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        prompt: "viのコマンドモードでの操作に関して説明が正しいものを選択してください。",
         options: [
             { id: "q6o1", text: "h…カーソルを右へ移動" },
             { id: "q6o2", text: "j…カーソルを左へ移動" },
@@ -228,6 +228,247 @@ export const QUESTION_BANK: Question[] = [
                     「/wq!」は「wq!」という文字列をファイルから検索します。\n
                     よって、誤りです。\n
                     vi は Linux の標準エディタとしてよく使われます。viの基本操作を確認しておきましょう。`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q12",
+        prompt: "Linux システムを停止することのできるのコマンドをすべて選択してください。",
+        options: [
+            { id: "q12o1", text: "shutdown -H now" },
+            { id: "q12o2", text: "logout" },
+            { id: "q12o3", text: "exit" },
+            { id: "q12o4", text: "halt" }
+        ],
+        correctOptionIds: ["q12o1", "q12o4"],
+        explanation: `[解説]\n
+                        shutdown コマンドと halt コマンドは、システムを停止させるコマンドです。両コマンドともsystemctlのシ\n
+                        ンボリックリンクとなっており、プログラムとしては同じものを実行しています。\n
+                                # ls -l 'which halt'\n
+                                lrwxrwxrwx. 1 root root 16 Oct 6 00:08 /usr/sbin/halt -> .. /bin/systemctl\n
+                                # ls -l 'which shutdown'\n
+                                lrwxrwxrwx. 1 root root 16 Oct 6 00:08 /usr/sbin/shutdown -> .. /bin/systemctl\n
+                        shutdown コマンドと halt コマンドの違いは、指定できるオプションが異なるのと、デフォルトの動作が異な\n
+                        る、という点です。\n
+                        shutdown コマンドは、デフォルトではシステムを停止後、システムの電源を切りますが、指定する引数オプショ\n
+                        ンによって、システムの停止のみやシステムの再起動、指定した時間の経過後にシステムを終了させることができ\n
+                        ます。\n
+                        shutdown コマンドの構文は以下の通りです。\n
+                                shutdown [オプション][時間][通知メッセージ]\n
+                        shutdown コマンドの主なオプションは以下の通りです。\n
+                                -H , -- halt:システムを停止します\n
+                                -P , -- poweroff :  システムの電源を切ります(デフォルト)\n
+                                -r , -- reboot :システムを再起動します\n
+                                -h , -- halt :システムの電源を切ります( -- poweroff と同様)\n
+                        halt コマンドは、shutdown コマンドとは異なり、停止するまでの時間は指定できません。そのため、コマンド\n
+                        実行後、すぐにシステムを停止します。\n
+                        デフォルトでは、システムを停止するのみで、電源はついたままとなりますが、オプションを指定することで、シ\n
+                        ステムの電源を落とすことも可能です。\n
+                        halt コマンドの構文は以下の通りです。\n
+                                halt [オプション]\n
+                        halt コマンドの主なオプションは以下の通りです。\n
+                                -p , -- poweroff :システムの電源を切ります\n
+                                -f r -- force :強制的にシステムを停止します\n
+                                -w , -- wtmp-only :システムを停止せずwtmpレコードにのみ記録します\n
+                                -n , -- no-sync:ハードディスク/ストレージメディアを同期せず停止します\n`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q13",
+        prompt: `以下のコマンドを実行すると、どうなるか?\n
+                $ ls -la > list.txt ; pwd`,
+        options: [
+            { id: "q13o1", text: "カレントディレクトリのファイル一覧が「list.txt」と「pwd」という名の2つのファイルに書き込まれる" },
+            { id: "q13o2", text: "「 list.txt 」 ファイルが存在すればカレントディレクトリのファイル一覧が「 list.txt 」 に書き込まれ、存在しなければカレントディレクトリ名が表示される" },
+            { id: "q13o3", text: "カレントディレクトリのファイル一覧とカレントディレクトリ名が表示される" },
+            { id: "q13o4", text: "エラーになる" },
+            { id: "q13o5", text: "カレントディレクトリのファイル一覧である「list.txt」ファイルが作成された後、カレントディレクトリ名が表示される" }
+        ],
+        correctOptionIds: ["q13o5"],
+        explanation: `[解説]\n
+                    「>」は出力をファイルに切り替えるリダイレクトであり、「;」は区切られた複数のコマンドを順に実行する。`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q14",
+        prompt: `$ ls -ld /tmp\n
+                drwxrwxrwt 2 root root 1024 Mar 10 15:20 /tmp\n
+                あるディレクトリを ls コマンドで見ると、以下のように表示された。\n
+                この表示の説明としてもっとも適切なものはどれか?`,
+        options: [
+            { id: "q14o1", text: "/tmp ディレクトリ内の全ファイルのサイズ総計は1024KBである" },
+            { id: "q14o2", text: "/tmp ディレクトリにはスティッキービットが設定されている" },
+            { id: "q14o3", text: "/tmp ディレクトリは root しか利用できない" },
+            { id: "q14o4", text: "/tmp ディレクトリには 2 つのファイルもしくはディレクトリが置かれている" },
+            { id: "q14o5", text: "/tmp ディレクトリに作成されたファイルの所有者はすべて root になる" },
+        ],
+        correctOptionIds: ["q14o2"],
+        explanation: `[解説]\n
+                    一般ユーザのアクセス権表示が「rwt」となっているディレクトリにはスティッキービットが設定されているので、\n
+                    ファイルの所有者しかそのファイルを削除できない。/tmp ディレクトリは複数のユーザが同時に利用するため、\n
+                    勝手にファイルを消されないようにしている。`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q15",
+        prompt: `入力ミスにより、以下のようなエラーが表示された。この1sコマンドに続けて以下の echo コマンドを実行すると、下線部には何が表示されるか?\n
+                $ ls /homw\n
+                ls:/homw: そのようなファイルやディレクトリはありません\n
+                $ echo $?`,
+        options: [
+            { id: "q15o1", text: "1s /homw" },
+            { id: "q15o2", text: "1s" },
+            { id: "q15o3", text: "そのようなファイルやディレクトリはありません" },
+            { id: "q15o4", text: "0" },
+            { id: "q15o5", text: "1" }
+        ],
+        correctOptionIds: ["q15o5"],
+        explanation: `[解説]\n
+                    特殊な変数$?には、直前に実行したコマンドの戻り値が入る。正常終了は0であり、エラーが発生すると0以外`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q16",
+        prompt: `bash を使用している環境において、下記のコマンドを実行したとき表示されるものファイル名として正しいもの\n
+                はどれか。選択肢から1つ選択してください。`,
+        options: [
+            { id: "q16o1", text: "filename.c9 " },
+            { id: "q16o2", text: "filename.php" },
+            { id: "q16o3", text: "filename.a3" },
+            { id: "q16o4", text: "filename.4" },
+        ],
+        correctOptionIds: ["q16o3"],
+        explanation: `[解説]\n
+                    ワイルドカードには下記のものがあります。\n
+                    · *(アスタリスク)\n
+                    任意の0文字以上の文字列\n
+                    例:「apple」を含むファイルを表示したい場合 → 「1s*apple*」\n
+                    · ?(クエスチョンマーク)\n
+                    任意の1文字\n
+                    例:「apple」の後に2文字書かれているファイルを表示したい場合→「1s apple ?? 」\n
+                    · [](大括弧)\n
+                    大括弧内のいずれかの文字を含むものを表示\n
+                    直前に「!」を付けた場合は、大括弧内の文字を含まないものを表示\n
+                    例:「apple」の後にAからzまでのアルファベットが含まれているファイルを表示したい場合 →「1s\n
+                    apple [A-Z] ]\n
+                    例:「apple」の後にAからzまでのアルファベットが含まれていないファイルを表示したい場合 →\n
+                    '1s apple[ !A-z]]\n
+                    上記のワイルドカードを組み合わせると、簡単に表示したいファイルを絞り込むことができます。\n
+                    今回のワイルドカードでは、下記の条件を満たしている必要があります。\n
+                    1.ピリオドの前に0文字以上の任意の文字列\n
+                    2.ピリオドの後に「任意の一文字」がーつ\n
+                    3.上記の後ろに0から8までの数字`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q17",
+        prompt: `ファイルtestfileは現在、ユーザstudent が所有している。このファイルの所有者をteacher に変更したい\n
+                場合、どのコマンドを実行すればよいか?なお、teacherのUID は500、studentのUID は501である。`,
+        options: [
+            { id: "q17o1", text: "chown student teacher testfile" },
+            { id: "q17o2", text: "chown testfile student teacher" },
+            { id: "q17o3", text: "chown teacher testfile" },
+            { id: "q17o4", text: "chown teacher testfile" },
+            { id: "q17o5", text: "chown testfile teacher" }
+        ],
+        correctOptionIds: ["q17o3"],
+        explanation: `[解説]\n
+                    chown commandの書式は次のとおり。\n
+                    書式：chown [オプション] 所有者 ファイル/ディレクトリ`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q18",
+        prompt: `/home/sakura/doc ディレクトリ以下のファイルの所有者は現在 sakura になっているが、そのディレクトリ\n
+                以下の全ファイルの所有者を tomoyo に変更するにはどうすればよいか。`,
+        options: [
+            { id: "q18o1", text: "chown -d /home/sakura/doc Tomoyo" },
+            { id: "q18o2", text: "chown -d tomoyo /home/sakura/doc" },
+            { id: "q18o3", text: "chown tomoyo -d /home/sakura/doc" },
+            { id: "q18o4", text: "chown tomoyo /home/sakura/doc" },
+            { id: "q18o5", text: "chown -R tomoyo /home/sakura/doc" }
+        ],
+        correctOptionIds: ["q18o5"],
+        explanation: `[解説]\n
+                    -R オプションは、指定されたディレクトリ以下の全ファイルの所有者を再帰的に変更。書式は、\n
+                    chown [オプション] user名[:group名] file/directory名\n
+                    となる。なお、実際に所有者を変更できるのは スーパーユーザーだけ。`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q19",
+        prompt: `カレントディレクトリが/var/www のとき、カレントディレクトリにあるhtml ディレクトリ配下すべてのパ\n
+                ーミッションを一括で変更するコマンドを1つ選択してください。\n
+                html ディレクトリ配下のすべてのディレクトリ·ファイルに対して、「所有グループ」の書き込み権限のみを追加\n
+                する設定を行います。(他の対象者のパーミッションは変更しないこと)\n\n
+                [/var/www]\n
+                    $ ls -1\n
+                    dr-xr-xr-x 2\n
+                    root root 6 12 A 24 2019 cgi-bin\n
+                    drwxr-x-x 5\n
+                    root root 60 7月 21 10:23 html`,
+        options: [
+            { id: "q19o1", text: "chmod -R g+w html" },
+            { id: "q19o2", text: "chmod -v o+r html" },
+            { id: "q19o3", text: "chmod -cR u+x html" },
+            { id: "q19o4", text: "chmod -fR 575 /var/www/html" }
+        ],
+        correctOptionIds: ["q19o1"],
+        explanation: `[解説]\n
+                    ファイルやディレクトリにアクセスできるかどうかは、ファイルの「パーミッション」によって決まります。\n
+                    パーミッションの確認は以下のコマンドで可能です。\n
+                        ls -1, stat\n
+                    ファイルやディレクトリのパーミッションは、「r」(読み込み)「w」(書き込み)「x」(実行)の3つのアルファベ\n
+                    ットで表します。\n
+                    パーミッションを与える対象は、所有者·所有グループ·その他で分けられます。\n
+                    例題を例に、表記を見ていきます。\n
+                        $ ls -1d html\n
+                        drwxr-x -- x. 5 root root 60 7月 21 10:23 html\n
+                    表示結果の「rwxr-x -- x」の部分がパーミッションを示しています。\n
+                    先頭の「d」はディレクトリを示し、ファイルの場合は「-」となります。次の3文字が所有者、その後の3文字\n
+                    が所有グループ、最後の3文字がその他に対するアクセス権限を示しています。\n
+                    パーミッションを変更するコマンドは「chmod」になります。chmod でパーミッションを指定する際には二種類\n
+                    の表記が存在します。\n
+                    一つは「アルファベット」、もう一つは「数字」になります。\n
+                    アルファベット\n
+                    対象者を下記のように表記することができます。\n
+                            所有者 =u\n
+                            所有グループ =g\n
+                            その他 =o\n
+                    所有者に読み出し権限を追加する場合\n
+                            →「chmod u+r 指定のディレクトリ又はファイル」\n
+                    その他に実行権を削除する場合\n
+                            →「chmod o-x 指定のディレクトリ又はファイル」\n
+                    数字\n
+                    パーミッションを下記のように表記することができます。\n
+                            「r(読み出し)」=4\n
+                            「w(書き込み)」=2\n
+                            「x(実行)」=1\n
+                            何も許可しない=0\n
+                    上記の数字を足し算してパーミッションを指定することが可能です。\n
+                    すべての対象者に読み出しと実行を許可する設定をするとき\n
+                            →「chmod 555(対象者全てに4+1) 指定のディレクトリ又はファイル」\n
+                        所有者のみにすべて許可するとき\n
+                            →「chmod 700(所有者のみに4+2+1)指定のディレクトリ又はファイル」\n
+                    -Rオプションを指定することで、指定ディレクトリ配下のファイルやディレクトリのパーミッションを\n
+                    すべて変更できます。\n
+                    構文は以下の通りです。\n
+                    # chmod -R パーミッション内容 ディレクトリ名`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: "q19",
+        prompt: `/etc/passwd ファイルに設定されているアクセス権として適切なものはどれか?`,
+        options: [
+            { id: "q19o1", text: "666" },
+            { id: "q19o2", text: "644" },
+            { id: "q19o3", text: "700" },
+            { id: "q19o4", text: "400" },
+            { id: "q19o5", text: "600" }
+        ],
+        correctOptionIds: ["q19o2"],
+        explanation: `[解説]\n
+                    所有者(root)のみ読み書き可、それ以外のユーザは読み取りのみのアクセス権が設定される。root 以外のユー\n
+                    ザにも読み取り権限が与えられていないとログイン後の環境に支障がでる。`,
         meta: { category: "cb41", difficulty: "normal" },
     },
 ];

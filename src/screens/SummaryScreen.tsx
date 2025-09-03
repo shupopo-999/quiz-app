@@ -14,7 +14,7 @@ onBackToTitle: () => void;
 }) {
     const rate = total === 0 ? 0 : Math.round((correctCount / total) * 100);
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-4">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-4 screen-center">
             <div className="w-full max-w-xl bg-slate-900/60 rounded-2xl shadow-xl p-6 text-center">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">結果</h2>
                 <div className="text-5xl font-extrabold mb-2">{correctCount} / {total}</div>
