@@ -456,19 +456,245 @@ export const QUESTION_BANK: Question[] = [
         meta: { category: "cb41", difficulty: "normal" },
     },
     {
-        id: "q19",
+        id: "q20",
         prompt: `/etc/passwd ファイルに設定されているアクセス権として適切なものはどれか?`,
         options: [
-            { id: "q19o1", text: "666" },
-            { id: "q19o2", text: "644" },
-            { id: "q19o3", text: "700" },
-            { id: "q19o4", text: "400" },
-            { id: "q19o5", text: "600" }
+            { id: "q20o1", text: "666" },
+            { id: "q20o2", text: "644" },
+            { id: "q20o3", text: "700" },
+            { id: "q20o4", text: "400" },
+            { id: "q20o5", text: "600" }
         ],
-        correctOptionIds: ["q19o2"],
+        correctOptionIds: ["q20o2"],
         explanation: `[解説]\n
                     所有者(root)のみ読み書き可、それ以外のユーザは読み取りのみのアクセス権が設定される。root 以外のユー\n
                     ザにも読み取り権限が与えられていないとログイン後の環境に支障がでる。`,
         meta: { category: "cb41", difficulty: "normal" },
     },
+    {
+        id: "q21",
+        prompt: `/link ディレクトリにアクセスすると/originディレクトリが参照できるよう、\n
+                リンクを作成したい。どのコマンドを実行すればよいか。`,
+        options: [
+            { id: "q21o1", text: "ln /link /origin" },
+            { id: "q21o2", text: "ln /origin /link" },
+            { id: "q21o3", text: "ln -s /link /origin" },
+            { id: "q21o4", text: "ln -s /origin /link" }
+        ],
+        correctOptionIds: ["q21o4"],
+        explanation: `[解説]\n
+                    シンボリックリンクは、\n
+                    ln -s <リンク元(実体)><リンク先>\n
+                    で作成する。なお、ディレクトリのシンボリックリンクは作成できる、ディレクトリのハードリンクは作成できない。\n
+                    また、別のファイルシステムへのリンクが作成できるのはシンボリックリンクだけである。`,
+        meta: { category: "cb41", difficulty: "normal" },
+    },
+    {
+        id: `q22`,
+        prompt: `コマンドラインで\n
+                $ man 5 passwd\n
+                と入力した場合、結果として期待されるものはどれか?`,
+        options: [
+            { id: `q22o1`, text: `passwd コマンドのマニュアルページが表示される` },
+            { id: `q22o2`, text: `passwd コマンドの簡単なヘルプが表示される` },
+            { id: `q22o3`, text: `/etc/passwd ファイルのマニュアルページが表示される` },
+            { id: `q22o4`, text: `エラーになる` }
+        ],
+        correctOptionIds: ["q22o3"],
+        explanation: `[解說]\n
+                    man コマンドでは、コマンドの直前にセクションを指定することができる。この問題の場合、セクションは 5が\n
+                    指定されているため、passwd コマンドではなく、/etc/passwd ファイルのマニュアルが表示される。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q23`,
+        prompt: `ping コマンドを使用したところ、パケットの送出が止まらず繰り返されている。どのような処置を取ればよいか?`,
+        options: [
+            { id: `q23o1`, text: `Ctrl + z キーを押す` },
+            { id: `q23o2`, text: `Ctrl + C キーを押す` },
+            { id: `q23o3`, text: `Ctrl + S キーを押す` },
+            { id: `q23o4`, text: `Ctrl + Alt + Delete キーを押す` }
+        ],
+        correctOptionIds: ["q23o2"],
+        explanation: `[解説]\n
+                    Windows のping と違って、デフォルトでは「Ctrl+C」で停止するまでICMP パケットの送出は続く。-cオプ\n
+                    ションで送信パケットの個数を指定できる。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q24`,
+        prompt: `シェル変数の定義を確認したい場合、使用するコマンドを選択してください。`,
+        options: [
+            { id: `q24o1`, text: `env` },
+            { id: `q24o2`, text: `export` },
+            { id: `q24o3`, text: `set` },
+            { id: `q24o4`, text: `expand` }
+        ],
+        correctOptionIds: ["q24o3"],
+        explanation: `[解説]\n
+                    set コマンドを使用すると、シェル変数の設定の確認や変更を行うことができます。set コマンドでは、シェル変\n
+                    数と環境変数、両方の一覧を表示することが可能です。\n
+                    終了すると、シェル変数は失われます。\n
+                    また、子プロセスからは親プロセスで定義したシェル変数を参照することはできません。\n
+                    環境変数とは、その変数を定義したシェル上、およびそのシェルで実行されるプログラムすべてで有効な変数のことです。\n
+                    シェル変数とは、その変数を定義したシェルとプロセスでのみ、有効な変数のことです。そのシェルやプロセスを\n
+                    親プロセスの設定が子プロセスに引き継がれます。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q25`,
+        prompt: `/etc/配下にある「httpd.conf」というファイルの場所を検索したい。検索できるコマンドで正しいものを選択してください。`,
+        options: [
+            { id: `q25o1`, text: `find /etc/ -name httpd.conf` },
+            { id: `q25o2`, text: `find -name httpd.conf /etc/` },
+            { id: `q25o3`, text: `find -name httpd.conf -dir /etc/` },
+            { id: `q25o4`, text: `find /etc/ -type httpd.conf` }
+        ],
+        correctOptionIds: ["q25o1"],
+        explanation: `[解説]\n
+                    find コマンドは、指定したディレクトリ以下から検索条件にマッチするファイルやディレクトリを検索するコマ\n
+                    ンドです。\n
+                    find コマンドの書式は以下の通りです。\n
+                    find [検索するパス][検索条件]\n
+
+                    以下のような検索条件を指定することができます。\n
+                    -name 検索ワード:ファイル名やディレクトリ名が一致しているものを検索します。\n
+                        ワイルドカードを使用して部分一致で検索することも可能です。\n
+                    -mtime 日数(※):ファイルの最終更新日時が指定した日数前のファイルを検索します。\n
+                    -atime 日数(※):ファイルの最終アクセス日時が指定した日数前のファイルを検索します。\n
+                    -type f:検索対象をファイルのみとし検索します。\n
+                    -type d:検索対象をディレクトリのみとし検索します。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q26`,
+        prompt: `次の選択肢の中で、/home/user/test.txt というファイルを/home/backup ディレクトリに移動できないコマンドを選択してください。`,
+        options: [
+            { id: `q26o1`, text: `mv -r /home/user/test.txt /home/backup/` },
+            { id: `q26o2`, text: `mv -t /home/backup/ /home/user/test.txt` },
+            { id: `q26o3`, text: `mv -i /home/user/test.txt /home/backup/` },
+            { id: `q26o4`, text: `mv -n /home/user/test.txt /home/backup/` }
+        ],
+        correctOptionIds: ["q26o1"],
+        explanation: `[解說]\n
+                    mv コマンドは、ファイルやディレクトリの移動や名前の変更を行うコマンドです。\n
+                    書式は以下の通りです。\n
+                        mv [OPTION] SOURCE DEST\n
+                        SOURCE から DEST へ名前変更が行われます。\n
+                        mv [OPTION] SOURCE DIRECTORY\n
+                        SOURCE から DIRECTORY へ移動が行われます。\n
+                        mv [OPTION] -t DIRECTORY SOURCE\n
+                        SOURCE から DIRECTORY へ移動が行われます。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q27`,
+        prompt: `インストール済みのパッケージをすべて表示できるdnf コマンドを、全て選択してください。`,
+        options: [
+            { id: `q27o1`, text: `dnf search installed` },
+            { id: `q27o2`, text: `dnf list installed` },
+            { id: `q27o3`, text: `dnf installed` },
+            { id: `q27o4`, text: `dnf info installed` }
+        ],
+        correctOptionIds: ["q27o2"],
+        explanation: `[解説]\n
+                    dnf コマンドはパッケージ管理を行うためのコマンドです。\n
+                    選択肢にあるサブコマンドは、それぞれ以下の通りです。\n
+                        search :引数に指定したキーワードでパッケージ情報を検索する\n
+                        info:利用可能なパッケージに関する説明と要約情報を一覧表示する\n
+                        list :利用可能なパッケージに関するさまざまな情報を一覧表示する\n
+                    info サブコマンドと、list サブコマンドは両方ともパッケージに関する情報を表示するサブコマンドですが、\n
+                    info サプコマンドの方がより詳しい情報を表示することが可能です。\n
+                    また、info サブコマンドとlist サブコマンドは、オプションを指定することで表示する情報を絞り込むことが\n
+                    可能です。\n
+                        dnf list/info (オプションなし)     :インストール可能なパッケージとインストール済みのパッケージ\n
+                        dnf list/info installed :インストール済のパッケージ\n
+                        dnf list/info available :リポジトリ内で利用可能なパッケージ\n
+                        dnf list/info updates   :インストール済のパッケージでアップデート可能なパッケージ\n
+                        dnf list/info extras    :システムにインストールされているが、リポジトリには存在しないパッケージ`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q28`,
+        prompt: `/home/testuser/srcdir というディレクトリを、/tmpディレクトリにコピーしたい。srcdir ディレクトリ\n
+                のタイムスタンプを変えずに、srcdir ディレクトリ配下のディレクトリやファイルも含めてコピーできるコマンドを一つ選択してください。`,
+        options: [
+            { id: `q28o1`, text: `cp -rp /home/testuser/srcdir /tmp/` },
+            { id: `q28o2`, text: `cp -r /home/testuser/srcdir /tmp/` },
+            { id: `q28o3`, text: `cp -i /home/testuser/srcdir /tmp/` },
+            { id: `q28o4`, text: `cp -ri /home/testuser/srcdir /tmp/` }
+        ],
+        correctOptionIds: ["q28o1"],
+        explanation: `[解説]\n
+                    cp コマンドは、ファイルやディレクトリのコピーを行うコマンドです。\n
+                    書式は以下の通りです。\n
+                    cp [オプション] SOURCE DEST\n
+                    SOURCE から DEST へのコピーが行われます。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q29`,
+        prompt: `以下のファイルから、重複している行を全て削除し、同一行は一行だけ表示することのできるコマンドを、すべて選択してください。\n
+                test.txt\n
+                    dog\n
+                    cat\n
+                    pig\n
+                    pig\n
+                    dog\n
+                    dog`,
+        options: [
+            { id: `q29o1`, text: `sort -u test.txt` },
+            { id: `q29o2`, text: `uniq test.txt` },
+            { id: `q29o3`, text: `sort test.txt | uniq` },
+            { id: `q29o4`, text: `cat test.txt | uniq` }
+        ],
+        correctOptionIds: ["q29o1", "q29o3"],
+        explanation: `[解説]\n
+                    sort コマンドは、テキストファイルの行を並び替えるコマンドです。\n
+                    オプションなしで実行した場合、文字コードの順番に並び替えを行い標準出力に結果を表示します。\n
+                    sort コマンドには、並び替えに関するオプションなどを含む様々なオプションがあります。\n
+                            -b, -- ignore-leading-blanks    先頭の空白を無視して並び替える\n
+                            -f, -- ignore-case               大文字小文字区別せずに並び替える\n
+                            -n, -- numeric-sort               文字列を数値と見なして並べ替える\n
+                            -o, -- output=FILE                結果を出力するファイル名を指定する\n
+                            -u, -- unique                     同一行は1つ目だけを出力する\n
+                    uniq コマンドは、繰り返し行の出力や削除を行うコマンドです。オプションなしで実行した場合、連続する同じ\n
+                    行が最初に見つけた行にまとめられます。uniq コマンドは、連続する行の比較を行うため、重複する行が離れた\n
+                    場所にある場合、取り除くことはできません。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+    {
+        id: `q30`,
+        prompt: `test ユーザのホームディレクトリでコマンドを自作し、コマンドを実行しようとしたところ以下のエラーが表示された。\n
+                    $ org_command\n
+                    -bash: org_command: コマンドが見つかりません\n
+                この時、どのディレクトリにいてもコマンドを実行できるようにする方法として適切なものを全て選択してください。\n
+                ※実行権は設定されているものとします`,
+        options: [
+            { id: `q30o1`, text: `「$ printenv PATH」を実行する` },
+            { id: `q30o2`, text: `環境変数 PATH に test ユーザのホームディレクトリを追加する` },
+            { id: `q30o3`, text: `root 権限で実行する` },
+            { id: `q30o4`, text: `コマンドの実行ファイルを絶対パスで指定する` }
+        ],
+        correctOptionIds: ["q30o2", "q30o4"],
+        explanation: `[解説]\n
+                    コマンドを実行するためには、そのコマンドの実行ファイルが配置されている場所を指定する必要があります。\n
+                    ただし、環境変数 PATH に設定されているディレクトリ配下の実行ファイルは、自動的に検索されるため、\n
+                    絶対パスで指定しなくても実行することができます。\n
+                    環境変数 PATHに設定されているディレクトリは、echo コマンドを用いて確認することができます。\n
+                            $ echo $PATH\n
+                            /home/test/.local/bin:/home/test/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin\n
+                    例えば、ls コマンドはコマンド名のみで実行が可能です。ls コマンドの絶対パスを調べると、[/usr/bin/ls]\n
+                    と表示され、環境変数 PATH にある[/usr/bin]配下に実行ファイルがあることが分かります。\n
+                            $ which ls\n
+                            alias ls='ls --color=auto'\n
+                                /usr/bin/ls\n
+                    実行ファイルを配置しているディレクトリが環境変数PATH に設定されていない場合は、環境変数 PATH にディレ\n
+                    クトリを追加することで、パスを指定しなくてもコマンドを実行できるようになります。この作業を「パスを通す」\n
+                    といいます。\n
+                    このことから、「2.環境変数PATH にtest ユーザのホームディレクトリを追加する」と、「4.コマンドの実行\n
+                    ファイルを絶対パスで指定する」が正解となります。`,
+        meta: { category: `cb41`, difficulty: `normal` },
+    },
+
 ];

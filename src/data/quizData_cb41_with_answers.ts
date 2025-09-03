@@ -11,561 +11,561 @@ export type QuizItem = {
 
 export const quizItems: QuizItem[] = [
 {
-        id: "q1",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q1`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q1o1", text: "u" },
-            { id: "q1o2", text: "x" },
-            { id: "q1o3", text: "." },
-            { id: "q1o4", text: ":" },
-            { id: "q1o5", text: "-" }
+            { id: `q1o1`, text: `u` },
+            { id: `q1o2`, text: `x` },
+            { id: `q1o3`, text: `.` },
+            { id: `q1o4`, text: `:` },
+            { id: `q1o5`, text: `-` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q2",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q2`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q2o1", text: ":n" },
-            { id: "q2o2", text: ":set nu" },
-            { id: "q2o3", text: "/setnumber" },
-            { id: "q2o4", text: ":set number" },
-            { id: "q2o5", text: ":set -o" }
+            { id: `q2o1`, text: `:n` },
+            { id: `q2o2`, text: `:set nu` },
+            { id: `q2o3`, text: `/setnumber` },
+            { id: `q2o4`, text: `:set number` },
+            { id: `q2o5`, text: `:set -o` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q3",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q3`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q3o1", text: "5X" },
-            { id: "q3o2", text: "5xx" },
-            { id: "q3o3", text: "5D" },
-            { id: "q3o4", text: "5dd" },
-            { id: "q3o5", text: "5XX" }
+            { id: `q3o1`, text: `5X` },
+            { id: `q3o2`, text: `5xx` },
+            { id: `q3o3`, text: `5D` },
+            { id: `q3o4`, text: `5dd` },
+            { id: `q3o5`, text: `5XX` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q4",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q4`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q4o1", text: "0 ...." },
-            { id: "q4o2", text: "5G ..." }
+            { id: `q4o1`, text: `0 ....` },
+            { id: `q4o2`, text: `5G ...` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q5",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q5`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q5o1", text: "E ...." },
-            { id: "q5o2", text: "X ...." }
+            { id: `q5o1`, text: `E ....` },
+            { id: `q5o2`, text: `X ....` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q6",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q6`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q6o1", text: "j…" },
-            { id: "q6o2", text: "k…" }
+            { id: `q6o1`, text: `j…` },
+            { id: `q6o2`, text: `k…` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q7",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q7`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q7o1", text: "head" },
-            { id: "q7o2", text: "cat" },
-            { id: "q7o3", text: "tac" },
-            { id: "q7o4", text: "nl" },
-            { id: "q7o5", text: "tail" }
+            { id: `q7o1`, text: `head` },
+            { id: `q7o2`, text: `cat` },
+            { id: `q7o3`, text: `tac` },
+            { id: `q7o4`, text: `nl` },
+            { id: `q7o5`, text: `tail` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q8",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q8`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q8o1", text: "3yy" },
-            { id: "q8o2", text: "3dd" },
-            { id: "q8o3", text: "3x" },
-            { id: "q8o4", text: "3p" }
+            { id: `q8o1`, text: `3yy` },
+            { id: `q8o2`, text: `3dd` },
+            { id: `q8o3`, text: `3x` },
+            { id: `q8o4`, text: `3p` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q9",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q9`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q9o1", text: "reboot" },
-            { id: "q9o2", text: "shutdown" },
-            { id: "q9o3", text: "restart" },
-            { id: "q9o4", text: "init" },
-            { id: "q9o5", text: "inittab" }
+            { id: `q9o1`, text: `reboot` },
+            { id: `q9o2`, text: `shutdown` },
+            { id: `q9o3`, text: `restart` },
+            { id: `q9o4`, text: `init` },
+            { id: `q9o5`, text: `inittab` }
         ],
         correctOptionIds: [],
-        explanation: "4.",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: `4.`,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q10",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q10`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q10o1", text: "3" },
-            { id: "q10o2", text: "3" }
+            { id: `q10o1`, text: `3` },
+            { id: `q10o2`, text: `3` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q11",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q11`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q11o1", text: ":wq" },
-            { id: "q11o2", text: ":q!" },
-            { id: "q11o3", text: "/q!" },
-            { id: "q11o4", text: "/wq" }
+            { id: `q11o1`, text: `:wq` },
+            { id: `q11o2`, text: `:q!` },
+            { id: `q11o3`, text: `/q!` },
+            { id: `q11o4`, text: `/wq` }
         ],
         correctOptionIds: [],
-        explanation: "/wq!\nwq!\nvi\nLinux\nvi\nCB41 Linux\n2025\n AT14",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: `/wq!\nwq!\nvi\nLinux\nvi\nCB41 Linux\n2025\n AT14`,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q12",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q12`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q12o1", text: "shutdown -H now" },
-            { id: "q12o2", text: "logout" },
-            { id: "q12o3", text: "exit" },
-            { id: "q12o4", text: "halt" }
+            { id: `q12o1`, text: `shutdown -H now` },
+            { id: `q12o2`, text: `logout` },
+            { id: `q12o3`, text: `exit` },
+            { id: `q12o4`, text: `halt` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q13",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q13`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q13o1", text: "/tmp" },
-            { id: "q13o2", text: "/tmp" },
-            { id: "q13o3", text: "/tmp" },
-            { id: "q13o4", text: "/tmp" },
-            { id: "q13o5", text: "/tmp" }
+            { id: `q13o1`, text: `/tmp` },
+            { id: `q13o2`, text: `/tmp` },
+            { id: `q13o3`, text: `/tmp` },
+            { id: `q13o4`, text: `/tmp` },
+            { id: `q13o5`, text: `/tmp` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q14",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q14`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q14o1", text: "ls /homw" },
-            { id: "q14o2", text: "ls" }
+            { id: `q14o1`, text: `ls /homw` },
+            { id: `q14o2`, text: `ls` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q15",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q15`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q15o1", text: "filename.c9" },
-            { id: "q15o2", text: "filename.php" },
-            { id: "q15o3", text: "filename.a3" },
-            { id: "q15o4", text: "filename.4" }
+            { id: `q15o1`, text: `filename.c9` },
+            { id: `q15o2`, text: `filename.php` },
+            { id: `q15o3`, text: `filename.a3` },
+            { id: `q15o4`, text: `filename.4` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q16",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q16`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q16o1", text: "chown student teacher testfile" },
-            { id: "q16o2", text: "chown testfile student teacher" },
-            { id: "q16o3", text: "chown teacher testfile" },
-            { id: "q16o4", text: "chown -u 500 testfile" },
-            { id: "q16o5", text: "chown testfile teacher" }
+            { id: `q16o1`, text: `chown student teacher testfile` },
+            { id: `q16o2`, text: `chown testfile student teacher` },
+            { id: `q16o3`, text: `chown teacher testfile` },
+            { id: `q16o4`, text: `chown -u 500 testfile` },
+            { id: `q16o5`, text: `chown testfile teacher` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q17",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q17`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q17o1", text: "chown -d /home/sakura/doc Tomoyo" },
-            { id: "q17o2", text: "chown -d tomoyo /home/sakura/doc" },
-            { id: "q17o3", text: "chown tomoyo -d /home/sakura/doc" },
-            { id: "q17o4", text: "chown tomoyo /home/sakura/doc" },
-            { id: "q17o5", text: "chown -R tomoyo /home/sakura/doc" }
+            { id: `q17o1`, text: `chown -d /home/sakura/doc Tomoyo` },
+            { id: `q17o2`, text: `chown -d tomoyo /home/sakura/doc` },
+            { id: `q17o3`, text: `chown tomoyo -d /home/sakura/doc` },
+            { id: `q17o4`, text: `chown tomoyo /home/sakura/doc` },
+            { id: `q17o5`, text: `chown -R tomoyo /home/sakura/doc` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q18",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q18`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q18o1", text: "сhmod -R g+w html" },
-            { id: "q18o2", text: "chmod -v o+r html" },
-            { id: "q18o3", text: "chmod -cR u+x html" },
-            { id: "q18o4", text: "chmod -fR 575 /var/www/html" }
+            { id: `q18o1`, text: `сhmod -R g+w html` },
+            { id: `q18o2`, text: `chmod -v o+r html` },
+            { id: `q18o3`, text: `chmod -cR u+x html` },
+            { id: `q18o4`, text: `chmod -fR 575 /var/www/html` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q19",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q19`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q19o1", text: "666" },
-            { id: "q19o2", text: "644" },
-            { id: "q19o3", text: "700" },
-            { id: "q19o4", text: "400" },
-            { id: "q19o5", text: "600" }
+            { id: `q19o1`, text: `666` },
+            { id: `q19o2`, text: `644` },
+            { id: `q19o3`, text: `700` },
+            { id: `q19o4`, text: `400` },
+            { id: `q19o5`, text: `600` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q20",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q20`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q20o1", text: "ln /link /origin" },
-            { id: "q20o2", text: "ln /origin /link" },
-            { id: "q20o3", text: "ln -s /link /origin" },
-            { id: "q20o4", text: "ln -s /origin /link" }
+            { id: `q20o1`, text: `ln /link /origin` },
+            { id: `q20o2`, text: `ln /origin /link` },
+            { id: `q20o3`, text: `ln -s /link /origin` },
+            { id: `q20o4`, text: `ln -s /origin /link` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q21",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q21`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q21o1", text: "passwd" },
-            { id: "q21o2", text: "passwd" },
-            { id: "q21o3", text: "/etc/passwd" }
+            { id: `q21o1`, text: `passwd` },
+            { id: `q21o2`, text: `passwd` },
+            { id: `q21o3`, text: `/etc/passwd` }
         ],
         correctOptionIds: [],
-        explanation: "4.",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: `4.`,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q22",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q22`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q22o1", text: "Ctrl + Z" },
-            { id: "q22o2", text: "Ctrl + C" },
-            { id: "q22o3", text: "Ctrl + S" },
-            { id: "q22o4", text: "Ctrl + alt + Delete" }
+            { id: `q22o1`, text: `Ctrl + Z` },
+            { id: `q22o2`, text: `Ctrl + C` },
+            { id: `q22o3`, text: `Ctrl + S` },
+            { id: `q22o4`, text: `Ctrl + alt + Delete` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q23",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q23`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q23o1", text: "env" },
-            { id: "q23o2", text: "export" },
-            { id: "q23o3", text: "set" }
+            { id: `q23o1`, text: `env` },
+            { id: `q23o2`, text: `export` },
+            { id: `q23o3`, text: `set` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q24",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q24`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q24o1", text: "find /etc/ -name httpd.conf" },
-            { id: "q24o2", text: "find -name httpd.conf /etc/" },
-            { id: "q24o3", text: "find -name httpd.conf -dir /etc/" },
-            { id: "q24o4", text: "find /etc/ -type httpd.conf" }
+            { id: `q24o1`, text: `find /etc/ -name httpd.conf` },
+            { id: `q24o2`, text: `find -name httpd.conf /etc/` },
+            { id: `q24o3`, text: `find -name httpd.conf -dir /etc/` },
+            { id: `q24o4`, text: `find /etc/ -type httpd.conf` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q25",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q25`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q25o1", text: "mv -r /home/user/test.txt /home/backup/" },
-            { id: "q25o2", text: "mv -t /home/backup/ /home/user/test.txt" },
-            { id: "q25o3", text: "mv -i /home/user/test.txt /home/backup/" },
-            { id: "q25o4", text: "mv -n /home/user/test.txt /home/backup/" }
+            { id: `q25o1`, text: `mv -r /home/user/test.txt /home/backup/` },
+            { id: `q25o2`, text: `mv -t /home/backup/ /home/user/test.txt` },
+            { id: `q25o3`, text: `mv -i /home/user/test.txt /home/backup/` },
+            { id: `q25o4`, text: `mv -n /home/user/test.txt /home/backup/` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q26",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q26`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q26o1", text: "dnf search installed" },
-            { id: "q26o2", text: "dnf list installed" },
-            { id: "q26o3", text: "dnf installed" },
-            { id: "q26o4", text: "dnf info installed" }
+            { id: `q26o1`, text: `dnf search installed` },
+            { id: `q26o2`, text: `dnf list installed` },
+            { id: `q26o3`, text: `dnf installed` },
+            { id: `q26o4`, text: `dnf info installed` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q27",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q27`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q27o1", text: "cp -rp /home/testuser/srcdir /tmp/" },
-            { id: "q27o2", text: "cp -r /home/testuser/srcdir /tmp/" },
-            { id: "q27o3", text: "cp -i /home/testuser/srcdir /tmp/" },
-            { id: "q27o4", text: "cp -ri /home/testuser/srcdir /tmp/" }
+            { id: `q27o1`, text: `cp -rp /home/testuser/srcdir /tmp/` },
+            { id: `q27o2`, text: `cp -r /home/testuser/srcdir /tmp/` },
+            { id: `q27o3`, text: `cp -i /home/testuser/srcdir /tmp/` },
+            { id: `q27o4`, text: `cp -ri /home/testuser/srcdir /tmp/` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q28",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q28`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q28o1", text: "sort -u test.txt" },
-            { id: "q28o2", text: "uniq test.txt" },
-            { id: "q28o3", text: "sort test.txt | uniq" },
-            { id: "q28o4", text: "cat test.txt | uniq" }
+            { id: `q28o1`, text: `sort -u test.txt` },
+            { id: `q28o2`, text: `uniq test.txt` },
+            { id: `q28o3`, text: `sort test.txt | uniq` },
+            { id: `q28o4`, text: `cat test.txt | uniq` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q29",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q29`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q29o1", text: "grep \"TEXT00[1 5]\" text.txt" },
-            { id: "q29o2", text: "cat text.txt | grep [1-5]" },
-            { id: "q29o3", text: "cat text.txt | grep [12345]" },
-            { id: "q29o4", text: "grep \"TEXT00[1-5]\" text.txt" }
+            { id: `q29o1`, text: `grep \`TEXT00[1 5]\` text.txt` },
+            { id: `q29o2`, text: `cat text.txt | grep [1-5]` },
+            { id: `q29o3`, text: `cat text.txt | grep [12345]` },
+            { id: `q29o4`, text: `grep \`TEXT00[1-5]\` text.txt` }
         ],
         correctOptionIds: [],
-        explanation: "4.",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: `4.`,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q30",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q30`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q30o1", text: "head -f /var/log/message" },
-            { id: "q30o2", text: "less /var/log/message" },
-            { id: "q30o3", text: "cat /var/log/message" },
-            { id: "q30o4", text: "tail -f /var/log/message" }
+            { id: `q30o1`, text: `head -f /var/log/message` },
+            { id: `q30o2`, text: `less /var/log/message` },
+            { id: `q30o3`, text: `cat /var/log/message` },
+            { id: `q30o4`, text: `tail -f /var/log/message` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q31",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q31`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q31o1", text: "cp -rp /home/testuser/srcdir /tmp/" },
-            { id: "q31o2", text: "cp -r /home/testuser/srcdir /tmp/" },
-            { id: "q31o3", text: "cp -i /home/testuser/srcdir /tmp/" },
-            { id: "q31o4", text: "cp -ri /home/testuser/srcdir /tmp/" }
+            { id: `q31o1`, text: `cp -rp /home/testuser/srcdir /tmp/` },
+            { id: `q31o2`, text: `cp -r /home/testuser/srcdir /tmp/` },
+            { id: `q31o3`, text: `cp -i /home/testuser/srcdir /tmp/` },
+            { id: `q31o4`, text: `cp -ri /home/testuser/srcdir /tmp/` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q32",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q32`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q32o1", text: "mv -r /home/user/test.txt /home/backup/" },
-            { id: "q32o2", text: "mv -t /home/backup/ /home/user/test.txt" },
-            { id: "q32o3", text: "mv -i /home/user/test.txt /home/backup/" },
-            { id: "q32o4", text: "mv -n /home/user/test.txt /home/backup/" }
+            { id: `q32o1`, text: `mv -r /home/user/test.txt /home/backup/` },
+            { id: `q32o2`, text: `mv -t /home/backup/ /home/user/test.txt` },
+            { id: `q32o3`, text: `mv -i /home/user/test.txt /home/backup/` },
+            { id: `q32o4`, text: `mv -n /home/user/test.txt /home/backup/` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q33",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q33`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q33o1", text: "sed s/level/Level/ test.txt" },
-            { id: "q33o2", text: "sed s/level/Level/g test.txt" },
-            { id: "q33o3", text: "sed y/level/Level/ test.txt" },
-            { id: "q33o4", text: "sed y/level/Level/g test.txt" }
+            { id: `q33o1`, text: `sed s/level/Level/ test.txt` },
+            { id: `q33o2`, text: `sed s/level/Level/g test.txt` },
+            { id: `q33o3`, text: `sed y/level/Level/ test.txt` },
+            { id: `q33o4`, text: `sed y/level/Level/g test.txt` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q34",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q34`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q34o1", text: "Apache" },
-            { id: "q34o2", text: "/var/new" },
-            { id: "q34o3", text: "srm.conf" }
+            { id: `q34o1`, text: `Apache` },
+            { id: `q34o2`, text: `/var/new` },
+            { id: `q34o3`, text: `srm.conf` }
         ],
         correctOptionIds: [],
-        explanation: "test.txt",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: `test.txt`,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q35",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q35`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q35o1", text: "AuthType" },
-            { id: "q35o2", text: "AccessFormat" },
-            { id: "q35o3", text: "AccessType" },
-            { id: "q35o4", text: "Require" },
-            { id: "q35o5", text: "AuthProto" }
+            { id: `q35o1`, text: `AuthType` },
+            { id: `q35o2`, text: `AccessFormat` },
+            { id: `q35o3`, text: `AccessType` },
+            { id: `q35o4`, text: `Require` },
+            { id: `q35o5`, text: `AuthProto` }
         ],
         correctOptionIds: [],
-        explanation: "ls\ntest.txt",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: `ls\ntest.txt`,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q36",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q36`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q36o1", text: "IP" },
-            { id: "q36o2", text: "IP" }
+            { id: `q36o1`, text: `IP` },
+            { id: `q36o2`, text: `IP` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q37",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q37`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q37o1", text: "find / -name \"*.conf\" 2> error.txt" },
-            { id: "q37o2", text: "find / -name \"*.conf\" > error.txt" },
-            { id: "q37o3", text: "find / -name \"*.conf\" >> error.txt" },
-            { id: "q37o4", text: "find / -name \"*.conf\" > error.txt 2>&1" }
+            { id: `q37o1`, text: `find / -name \`*.conf\` 2> error.txt` },
+            { id: `q37o2`, text: `find / -name \`*.conf\` > error.txt` },
+            { id: `q37o3`, text: `find / -name \`*.conf\` >> error.txt` },
+            { id: `q37o4`, text: `find / -name \`*.conf\` > error.txt 2>&1` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q38",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q38`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q38o1", text: "/var/log/messages" },
-            { id: "q38o2", text: "/var/log/xferlog" },
-            { id: "q38o3", text: "/var/log/secure" },
-            { id: "q38o4", text: "/var/log/httpd/access_log" },
-            { id: "q38o5", text: "/var/log/httpd/error_log" }
+            { id: `q38o1`, text: `/var/log/messages` },
+            { id: `q38o2`, text: `/var/log/xferlog` },
+            { id: `q38o3`, text: `/var/log/secure` },
+            { id: `q38o4`, text: `/var/log/httpd/access_log` },
+            { id: `q38o5`, text: `/var/log/httpd/error_log` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q39",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q39`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q39o1", text: "192.168.4.32" },
-            { id: "q39o2", text: "192.168.4.33" },
-            { id: "q39o3", text: "192.168.4.39" },
-            { id: "q39o4", text: "192.168.4.40" },
-            { id: "q39o5", text: "192.168.4.47" }
+            { id: `q39o1`, text: `192.168.4.32` },
+            { id: `q39o2`, text: `192.168.4.33` },
+            { id: `q39o3`, text: `192.168.4.39` },
+            { id: `q39o4`, text: `192.168.4.40` },
+            { id: `q39o5`, text: `192.168.4.47` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     },
 
 {
-        id: "q40",
-        prompt: "（問題文の抽出が困難でした。設問文を確認してください）",
+        id: `q40`,
+        prompt: `（問題文の抽出が困難でした。設問文を確認してください）`,
         options: [
-            { id: "q40o1", text: "172" },
-            { id: "q40o2", text: "172.16.124.0" },
-            { id: "q40o3", text: "255.255.255.0" },
-            { id: "q40o4", text: "172.16.124.255" },
-            { id: "q40o5", text: "127.0.0.1" }
+            { id: `q40o1`, text: `172` },
+            { id: `q40o2`, text: `172.16.124.0` },
+            { id: `q40o3`, text: `255.255.255.0` },
+            { id: `q40o4`, text: `172.16.124.255` },
+            { id: `q40o5`, text: `127.0.0.1` }
         ],
         correctOptionIds: [],
-        explanation: "",
-        meta: { category: "cb41", difficulty: "normal" },
+        explanation: ``,
+        meta: { category: `cb41`, difficulty: `normal` },
     }
 ];
 
