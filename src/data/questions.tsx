@@ -952,7 +952,7 @@ export const QUESTION_BANK: Question[] = [
         id: `q40`,
         prompt: `Apache HTTPD で、BASIC 認証によるアクセス制御を実施するため、.htaccess ファイルを編集している。以\n
                 下は設定の一部である。空欄に当てはまるディレクティブはどれか?\n
-                Basic\n
+                ______________Basic\n
                 AuthName "Restricted Area"\n
                 AuthUserFile /etc/httpd/conf/.htpasswd`,
         options: [
