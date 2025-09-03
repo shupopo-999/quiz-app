@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import type { Settings } from "../types/quiz";
+import "../types/quiz.css";
 
 
 export default function TitleScreen({
@@ -20,7 +21,7 @@ defaultSettings.shuffleOptions
 
 
 return (
-<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-4">
+<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-4 screen-center">
 <div className="w-full max-w-xl bg-slate-900/60 rounded-2xl shadow-xl p-6">
 <h1 className="text-2xl md:text-3xl font-bold mb-4">100点取るぞ！</h1>
 <p className="text-slate-300 mb-6">問題は毎回ランダムに抽出・並び替えられます。</p>

@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import type { Question } from "../types/quiz";
 import QuestionCard from "../components/QuestionCard";
 import { eqSet } from "../utils/random";
-
+import "../types/quiz.css";
 
 export default function QuizScreen({
 questions,
@@ -56,7 +56,7 @@ onFinish: (result: { correctCount: number; total: number }) => void;
 
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-4">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-4 screen-center">
             <div className="mx-auto max-w-3xl">
                 <div className="flex items-center justify-between mb-4">
                     <h2 className="text-xl font-bold">クイズ</h2>
@@ -84,7 +84,7 @@ onFinish: (result: { correctCount: number; total: number }) => void;
                         }`}
                     >
                         <div className="font-bold mb-2">{isCorrect ? "正解！" : "不正解"}</div>
-                        <div className="text-slate-200" style={{ whiteSpace: "pre-line" }}>{q.explanation || "この問題に解説は設定されていません。"}</div>
+                        <div className="text-slate-200 explanation">{q.explanation || "この問題に解説は設定されていません。"}</div>
                         <div className="mt-4 flex justify-end">
                             <button
                                 onClick={handleNext}
