@@ -978,7 +978,7 @@ export const QUESTION_BANK: Question[] = [
             { id: `q41o3`, text: `IPアドレスとOR演算を行うことでネットワークアドレスを算出できる` },
             { id: `q41o4`, text: `クラスCの標準的なネットマスクは24ビットである` },
         ],
-        correctOptionIds: ["q41o1"],
+        correctOptionIds: ["q41o3"],
         explanation: `[解答]\n
                 IPアドレスとOR演算を行うことでネットワークアドレスを算出できる\n\n
                 [解説]\n
