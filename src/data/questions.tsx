@@ -366,7 +366,8 @@ export const QUESTION_BANK: Question[] = [
     {
         id: "q16",
         prompt: `bash を使用している環境において、下記のコマンドを実行したとき表示されるものファイル名として正しいもの\n
-                はどれか。選択肢から1つ選択してください。`,
+                はどれか。選択肢から1つ選択してください。\n
+                $ ls *.?[0-8]`,
         options: [
             { id: "q16o1", text: "filename.c9 " },
             { id: "q16o2", text: "filename.php" },
