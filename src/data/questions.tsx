@@ -12,7 +12,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q1o4", text: "編集中の内容を破棄して、直前に保存した内容に戻す" },
         ],
         correctOptionIds: ["q1o3"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                        編集中の内容をファイルに書き込んでvi を終了する\n\n
+                    [解説]\n
                     これは、:wq とするのと同じ。1,2,4 の正しいコマンドは以下のとおり。1:q, 2:q!, 4:e!`,
         meta: { category: "web", difficulty: "normal" },
     },
@@ -27,7 +29,10 @@ export const QUESTION_BANK: Question[] = [
             { id: "q2o5", text: "_" },
         ],
         correctOptionIds: ["q2o3"],
-        explanation: `[解説]\n
+        explanation: `
+                    [解答]\n
+                        .\n\n
+                    [解説]\n
                     u は直前の編集を取り消す、\n
                     x はカーソル位置の文字を削除する、\n
                     : はコマンドラインモードに入る、\n
@@ -45,7 +50,10 @@ export const QUESTION_BANK: Question[] = [
             { id: "q3o5", text: ":set -o" },
         ],
         correctOptionIds: ["q3o2","q3o4"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                        :set nu\n
+                        :set number\n\n
+                        [解説]\n
                         「:set~」で、さまざまなコマンドを実行できる。\n
                         :set autoindent ... 自動インデント(省略形:ai)\n
                         :set number.....行番号の表示(省略形:nu)\n
@@ -63,7 +71,10 @@ export const QUESTION_BANK: Question[] = [
             { id: "q4o5", text: "5XX" }
         ],
         correctOptionIds: ["q4o4"],
-        explanation: "",
+        explanation: `[解答]\n
+                        5dd\n\n
+                    [解説]\n
+                    5dd はカーソルのある行から5行を削除するコマンドです。`,
         meta: { category: "cb41", difficulty: "normal" },
     },
     {
@@ -77,7 +88,11 @@ export const QUESTION_BANK: Question[] = [
             { id: "q5o5", text: "$ ....行末に移動する" }
         ],
         correctOptionIds: ["q5o1", "q5o2", "q5o5"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    0\n
+                    5G\n
+                    $ \n\n
+                    [解説]\n
                     ファイルの最後の行に移動するのは G\n
                     カーソルのある行を削除するのは dd`,
         meta: { category: "cb41", difficulty: "normal" },
@@ -92,10 +107,10 @@ export const QUESTION_BANK: Question[] = [
             { id: "q6o4", text: "l…カーソルを下へ移動" }
         ],
         correctOptionIds: ["q6o3"],
-        explanation: `[解説]\n
-                    vi には、コマンドモードと入カモードの2種類があります。\n
-                    入力モードは、ファイルに文字を入力する際に利用するモードです。一方、コマンドモードはファイルのカーソル\n 
-                    移動や、コピーペースト、変更した内容の保存などを行うモードです。\n 
+        explanation: `[解答]\n
+                    
+                    [解説]\n
+                    k…カーソルを上へ移動\n\n
                     今回例題で問われているのは、カーソル移動に関するvi コマンドです。カーソル移動を行うためのvi コマンド\n
                     には以下のような種類があります。\n
                     1:カーソルを右へ移動\n
@@ -117,7 +132,11 @@ export const QUESTION_BANK: Question[] = [
             { id: "q7o5", text: "tail" }
         ],
         correctOptionIds: ["q7o1"],
-        explanation: "",
+        explanation: `[解答]\n
+                    head\n\n
+                    [解説]\n
+                    head コマンドは、ファイルの先頭から指定した行数だけを表示するコマンドです。引数を指定しない場合は、先頭から10行を表示します。\n
+                    cat コマンドはファイル全体を表示するコマンドであり、n1 は無効なコマンドです。tail コマンドはファイルの末尾を表示するコマンドです。`,
         meta: { category: "cb41", difficulty: "normal" },
     },
     {
@@ -130,7 +149,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q8o4", text: "3p" }
         ],
         correctOptionIds: ["q8o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]
+                    3dd\n\n
+                    [解説]\n
                     カーソルのある行を削除するコマンドは「dd」です。「dd」コマンドの前に数字を付けることで、削除する対象の\n
                     行数を指定することができます。\n
                                 $ vi example.txt\n
@@ -177,7 +198,11 @@ export const QUESTION_BANK: Question[] = [
             { id: "q9o5", text: "inittab" }
         ],
         correctOptionIds: [`q9o1`, `q9o2`, `q9o4`],
-        explanation: `「解説]\n
+        explanation: `[解答]
+                    reboot\n
+                    shutdown\n
+                    init 6\n\n
+                    [解説]\n
                     以下のいずれのやり方でも、システムを再起動できる。\n
                     # init 6\n
                     init コマンドはランレベルを変更します。ランレベル6は再起動なので、6にランレベルを移行させるとシステ\n
@@ -197,7 +222,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q10o4", text: "間違っているのでエラーになる" }
         ],
         correctOptionIds: ["q10o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]
+                    3分後に再起動する\n\n
+                    [解説]\n
                     「shutdown -r now」などの形で使うことが多いですが、数値を指定すると、指定した分数を経過後に shutdown\n
                     が行われる。`,
         meta: { category: "cb41", difficulty: "normal" },
@@ -213,7 +240,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q11o4", text: "/wq" }
         ],
         correctOptionIds: ["q11o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]
+                    :q!\n\n
+                    [解説]\n
                     「:q」はviを終了します。\n
                     但し、「:q」はファイル内に変更があった場合は終了することが出来ません。ファイルに変更があった場合でも保\n
                     存せず強制的に終了したい場合、「:q!」を実行します。\n
@@ -240,13 +269,16 @@ export const QUESTION_BANK: Question[] = [
             { id: "q12o4", text: "halt" }
         ],
         correctOptionIds: ["q12o1", "q12o4"],
-        explanation: `[解説]\n
-                        shutdown コマンドと halt コマンドは、システムを停止させるコマンドです。両コマンドともsystemctlのシ\n
-                        ンボリックリンクとなっており、プログラムとしては同じものを実行しています。\n
-                                # ls -l 'which halt'\n
-                                lrwxrwxrwx. 1 root root 16 Oct 6 00:08 /usr/sbin/halt -> .. /bin/systemctl\n
-                                # ls -l 'which shutdown'\n
-                                lrwxrwxrwx. 1 root root 16 Oct 6 00:08 /usr/sbin/shutdown -> .. /bin/systemctl\n
+        explanation: `[解答]\n
+                    shutdown -H now\n
+                    halt\n\n
+                    [解説]\n
+                    shutdown コマンドと halt コマンドは、システムを停止させるコマンドです。両コマンドともsystemctlのシ\n
+                    ンボリックリンクとなっており、プログラムとしては同じものを実行しています。\n
+                            # ls -l 'which halt'\n
+                            lrwxrwxrwx. 1 root root 16 Oct 6 00:08 /usr/sbin/halt -> .. /bin/systemctl\n
+                            # ls -l 'which shutdown'\n
+                            lrwxrwxrwx. 1 root root 16 Oct 6 00:08 /usr/sbin/shutdown -> .. /bin/systemctl\n
                         shutdown コマンドと halt コマンドの違いは、指定できるオプションが異なるのと、デフォルトの動作が異な\n
                         る、という点です。\n
                         shutdown コマンドは、デフォルトではシステムを停止後、システムの電源を切りますが、指定する引数オプショ\n
@@ -284,7 +316,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q13o5", text: "カレントディレクトリのファイル一覧である「list.txt」ファイルが作成された後、カレントディレクトリ名が表示される" }
         ],
         correctOptionIds: ["q13o5"],
-        explanation: `[解説]\n
+        explanation: `[解答]
+                    カレントディレクトリのファイル一覧である「list.txt」ファイルが作成された後、カレントディレクトリ名が表示される\n\n
+                    [解説]\n
                     「>」は出力をファイルに切り替えるリダイレクトであり、「;」は区切られた複数のコマンドを順に実行する。`,
         meta: { category: "cb41", difficulty: "normal" },
     },
@@ -302,7 +336,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q14o5", text: "/tmp ディレクトリに作成されたファイルの所有者はすべて root になる" },
         ],
         correctOptionIds: ["q14o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]
+                    /tmp ディレクトリにはスティッキービットが設定されている\n\n
+                    [解説]\n
                     一般ユーザのアクセス権表示が「rwt」となっているディレクトリにはスティッキービットが設定されているので、\n
                     ファイルの所有者しかそのファイルを削除できない。/tmp ディレクトリは複数のユーザが同時に利用するため、\n
                     勝手にファイルを消されないようにしている。`,
@@ -322,7 +358,8 @@ export const QUESTION_BANK: Question[] = [
             { id: "q15o5", text: "1" }
         ],
         correctOptionIds: ["q15o5"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    1\n\n
                     特殊な変数$?には、直前に実行したコマンドの戻り値が入る。正常終了は0であり、エラーが発生すると0以外`,
         meta: { category: "cb41", difficulty: "normal" },
     },
@@ -337,7 +374,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q16o4", text: "filename.4" },
         ],
         correctOptionIds: ["q16o3"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    filename.a3\n\n
+                    [解説]\n
                     ワイルドカードには下記のものがあります。\n
                     · *(アスタリスク)\n
                     任意の0文字以上の文字列\n
@@ -371,7 +410,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q17o5", text: "chown testfile teacher" }
         ],
         correctOptionIds: ["q17o3"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    chown teacher testfile\n\n
+                    [解説]\n
                     chown commandの書式は次のとおり。\n
                     書式：chown [オプション] 所有者 ファイル/ディレクトリ`,
         meta: { category: "cb41", difficulty: "normal" },
@@ -388,7 +429,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q18o5", text: "chown -R tomoyo /home/sakura/doc" }
         ],
         correctOptionIds: ["q18o5"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    chown -R tomoyo /home/sakura/doc\n\n
+                    [解説]\n
                     -R オプションは、指定されたディレクトリ以下の全ファイルの所有者を再帰的に変更。書式は、\n
                     chown [オプション] user名[:group名] file/directory名\n
                     となる。なお、実際に所有者を変更できるのは スーパーユーザーだけ。`,
@@ -413,7 +456,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q19o4", text: "chmod -fR 575 /var/www/html" }
         ],
         correctOptionIds: ["q19o1"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    chmod -R g+w html\n\n
+                    [解説]\n
                     ファイルやディレクトリにアクセスできるかどうかは、ファイルの「パーミッション」によって決まります。\n
                     パーミッションの確認は以下のコマンドで可能です。\n
                         ls -1, stat\n
@@ -466,7 +511,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q20o5", text: "600" }
         ],
         correctOptionIds: ["q20o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    644\n\n
+                    [解説]\n
                     所有者(root)のみ読み書き可、それ以外のユーザは読み取りのみのアクセス権が設定される。root 以外のユー\n
                     ザにも読み取り権限が与えられていないとログイン後の環境に支障がでる。`,
         meta: { category: "cb41", difficulty: "normal" },
@@ -482,7 +529,9 @@ export const QUESTION_BANK: Question[] = [
             { id: "q21o4", text: "ln -s /origin /link" }
         ],
         correctOptionIds: ["q21o4"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    ln -s /origin /link\n\n
+                    [解説]\n
                     シンボリックリンクは、\n
                     ln -s <リンク元(実体)><リンク先>\n
                     で作成する。なお、ディレクトリのシンボリックリンクは作成できる、ディレクトリのハードリンクは作成できない。\n
@@ -501,7 +550,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q22o4`, text: `エラーになる` }
         ],
         correctOptionIds: ["q22o3"],
-        explanation: `[解說]\n
+        explanation: `[解答]\n
+                    /etc/passwd ファイルのマニュアルページが表示される\n\n
+                    [解説]\n
                     man コマンドでは、コマンドの直前にセクションを指定することができる。この問題の場合、セクションは 5が\n
                     指定されているため、passwd コマンドではなく、/etc/passwd ファイルのマニュアルが表示される。`,
         meta: { category: `cb41`, difficulty: `normal` },
@@ -516,7 +567,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q23o4`, text: `Ctrl + Alt + Delete キーを押す` }
         ],
         correctOptionIds: ["q23o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    Ctrl + C キーを押す\n\n
+                    [解説]\n
                     Windows のping と違って、デフォルトでは「Ctrl+C」で停止するまでICMP パケットの送出は続く。-cオプ\n
                     ションで送信パケットの個数を指定できる。`,
         meta: { category: `cb41`, difficulty: `normal` },
@@ -531,7 +584,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q24o4`, text: `expand` }
         ],
         correctOptionIds: ["q24o3"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    set\n\n
+                    [解説]\n
                     set コマンドを使用すると、シェル変数の設定の確認や変更を行うことができます。set コマンドでは、シェル変\n
                     数と環境変数、両方の一覧を表示することが可能です。\n
                     終了すると、シェル変数は失われます。\n
@@ -551,7 +606,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q25o4`, text: `find /etc/ -type httpd.conf` }
         ],
         correctOptionIds: ["q25o1"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    find /etc/ -name httpd.conf\n\n
+                    [解説]\n
                     find コマンドは、指定したディレクトリ以下から検索条件にマッチするファイルやディレクトリを検索するコマ\n
                     ンドです。\n
                     find コマンドの書式は以下の通りです。\n
@@ -576,7 +633,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q26o4`, text: `mv -n /home/user/test.txt /home/backup/` }
         ],
         correctOptionIds: ["q26o1"],
-        explanation: `[解說]\n
+        explanation: `[解答]\n
+                    mv -r /home/user/test.txt /home/backup/\n\n
+                    [解説]\n
                     mv コマンドは、ファイルやディレクトリの移動や名前の変更を行うコマンドです。\n
                     書式は以下の通りです。\n
                         mv [OPTION] SOURCE DEST\n
@@ -597,7 +656,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q27o4`, text: `dnf info installed` }
         ],
         correctOptionIds: ["q27o2"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    dnf list installed\n\n
+                    [解説]\n
                     dnf コマンドはパッケージ管理を行うためのコマンドです。\n
                     選択肢にあるサブコマンドは、それぞれ以下の通りです。\n
                         search :引数に指定したキーワードでパッケージ情報を検索する\n
@@ -625,7 +686,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q28o4`, text: `cp -ri /home/testuser/srcdir /tmp/` }
         ],
         correctOptionIds: ["q28o1"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    cp -rp /home/testuser/srcdir /tmp/\n\n
+                    [解説]\n
                     cp コマンドは、ファイルやディレクトリのコピーを行うコマンドです。\n
                     書式は以下の通りです。\n
                     cp [オプション] SOURCE DEST\n
@@ -649,7 +712,10 @@ export const QUESTION_BANK: Question[] = [
             { id: `q29o4`, text: `cat test.txt | uniq` }
         ],
         correctOptionIds: ["q29o1", "q29o3"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    sort -u test.txt\n
+                    sort test.txt | uniq\n\n
+                    [解説]\n
                     sort コマンドは、テキストファイルの行を並び替えるコマンドです。\n
                     オプションなしで実行した場合、文字コードの順番に並び替えを行い標準出力に結果を表示します。\n
                     sort コマンドには、並び替えに関するオプションなどを含む様々なオプションがあります。\n
@@ -677,7 +743,10 @@ export const QUESTION_BANK: Question[] = [
             { id: `q30o4`, text: `コマンドの実行ファイルを絶対パスで指定する` }
         ],
         correctOptionIds: ["q30o2", "q30o4"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    環境変数PATHにtestユーザのホームディレクトリを追加する\n
+                    コマンド実行ファイルを絶対パスで指定する\n\n
+                    [解説]\n
                     コマンドを実行するためには、そのコマンドの実行ファイルが配置されている場所を指定する必要があります。\n
                     ただし、環境変数 PATH に設定されているディレクトリ配下の実行ファイルは、自動的に検索されるため、\n
                     絶対パスで指定しなくても実行することができます。\n
@@ -718,7 +787,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q31o4`, text: `grep \"TEXT00[1-5]\" text.txt` }
         ],
         correctOptionIds: ["q31o4"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    grep "TEXT00[1-5]" text.txt\n\n
+                    [解説]\n
                     []はカッコ内に入力されたいずれかの文字でマッチさせる正規表現です。以下のようにーと組み合わせることで範囲を指定して検索することができます。\n
                     範囲指定の一例\n
                     [0-9] : 数字の0から9にマッチする行を出力する\n
@@ -741,7 +812,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q32o4`, text: `tail -f /var/log/message` }
         ],
         correctOptionIds: ["q32o4"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    tail -f /var/log/message\n\n
+                    [解説]\n
                     tail コマンドは、ファイルの末尾から引数で指定された一部を出力するコマンドです。\n
                     デフォルトではファイルの末尾から10行分が出力されます。オプションを指定することで、出力する行数や文字\n
                     数を指定することもできます。\n
@@ -765,7 +838,9 @@ export const QUESTION_BANK: Question[] = [
             { id: `q33o4`, text: `cp -ri /home/testuser/srcdir /tmp/` }
         ],
         correctOptionIds: ["q33o1"],
-        explanation: `[解説]\n
+        explanation: `[解答]\n
+                    cp -rp /home/testuser/srcdir /tmp/\n\n
+                    [解説]\n
                     cp コマンドは、ファイルやディレクトリのコピーを行うコマンドです。\n
                     書式は以下の通りです。\n
                         cp [オプション] SOURCE DEST\n
@@ -788,7 +863,8 @@ export const QUESTION_BANK: Question[] = [
             { id: `q34o4`, text: `mv -n /home/user/test.txt /home/backup/` }
         ],
         correctOptionIds: ["q32o1"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    mv -r /home/user/test.txt /home/backup/\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -801,7 +877,8 @@ export const QUESTION_BANK: Question[] = [
             { id: `q35o4`, text: `「 ls > test.txt」は、標準出力をtest.txtに書き込んでいる` }
         ],
         correctOptionIds: ["q35o4"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    「ls > test.txt」は、標準出力をtest.txtに書き込んでいる\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -815,7 +892,8 @@ export const QUESTION_BANK: Question[] = [
             { id: `q36o4`, text: `sed y/level/Level/g test.txt` }
         ],
         correctOptionIds: ["q36o2"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    sed s/level/Level/g test.txt\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -828,7 +906,8 @@ export const QUESTION_BANK: Question[] = [
             { id: `q37o4`, text: `find / -name \`*.conf\` > error.txt 2>&1` }
         ],
         correctOptionIds: ["q37o1"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    find / -name "*.conf" 2> error.txt\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -843,7 +922,8 @@ export const QUESTION_BANK: Question[] = [
             { id: `q38o5`, text: `/var/log/httpd/error_log` }
         ],
         correctOptionIds: ["q38o5"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    /var/log/httpd/error_log\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -860,7 +940,11 @@ export const QUESTION_BANK: Question[] = [
             { id: `q39o5`, text: `/varのパーミッション設定に誤りがある` }
         ],
         correctOptionIds: ["q39o1", "q39o4"],
-        explanation: `Apacheを再起動していない場合、設定が反映されません。また、ブラウザのキャッシュが有効になっていると、古いコンテンツが表示されることがあります。`,
+        explanation: `[解答]\n
+                    Apacheを再起動していない\n
+                    ブラウザのキャッシュが有効になっている\n\n
+                    [解説]\n
+                    Apacheを再起動していない場合、設定が反映されません。また、ブラウザのキャッシュが有効になっていると、古いコンテンツが表示されることがあります。`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -878,7 +962,10 @@ export const QUESTION_BANK: Question[] = [
             { id: `q40o5`, text: `AuthProto` }
         ],
         correctOptionIds: ["q40o1"],
-        explanation: `BASIC 認証を設定するためには、AuthType ディレクティブを使用して認証方式を指定する必要があります。`,
+        explanation: `[解答]\n
+                    AuthType\n\n
+                    [解説]\n
+                    BASIC 認証を設定するためには、AuthType ディレクティブを使用して認証方式を指定する必要があります。`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -891,7 +978,10 @@ export const QUESTION_BANK: Question[] = [
             { id: `q41o4`, text: `クラスCの標準的なネットマスクは24ビットである` },
         ],
         correctOptionIds: ["q41o1"],
-        explanation: `ネットマスクは、IPアドレスのネットワーク部を示すために使用される32ビットの値です。`,
+        explanation: `[解答]\n
+                IPアドレスとOR演算を行うことでネットワークアドレスを算出できる\n\n
+                [解説]\n
+                ネットマスクは、IPアドレスのネットワーク部を示すために使用される32ビットの値です。`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -906,7 +996,10 @@ export const QUESTION_BANK: Question[] = [
             { id: `q42o5`, text: `128` }
         ],
         correctOptionIds: ["q42o2"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    126\n\n
+                    [解説]\n
+                    サブネットマスクが255.255.255.128 の場合、ホスト部は7ビットであるため、2^7 - 2 = 126 のホストアドレスが利用可能です。`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -921,7 +1014,12 @@ export const QUESTION_BANK: Question[] = [
             { id: `q43o5`, text: `192.168.4.47` }
         ],
         correctOptionIds: ["q43o1", "q43o5"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    192.168.4.47\n
+                    192.168.4.32\n\n
+                    [解説]\n
+                    192.168.4.32 はネットワークアドレスであり、192.168.4.47 はブロードキャストアドレスであるため、\n
+                    これらのアドレスはホストに割り当てることができません。`,
         meta: { category: `cb41`, difficulty: `normal` },
     },
     {
@@ -936,7 +1034,8 @@ export const QUESTION_BANK: Question[] = [
             { id: `q44o5`, text: `127.0.0.1` }
         ],
         correctOptionIds: ["q44o2"],
-        explanation: ``,
+        explanation: `[解答]\n
+                    172.16.124.0\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
     }
 ];
