@@ -862,7 +862,7 @@ export const QUESTION_BANK: Question[] = [
             { id: `q34o3`, text: `mv -i /home/user/test.txt /home/backup/` },
             { id: `q34o4`, text: `mv -n /home/user/test.txt /home/backup/` }
         ],
-        correctOptionIds: ["q32o1"],
+        correctOptionIds: ["q34o1"],
         explanation: `[解答]\n
                     mv -r /home/user/test.txt /home/backup/\n\n`,
         meta: { category: `cb41`, difficulty: `normal` },
