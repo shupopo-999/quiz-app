@@ -84,7 +84,7 @@ onFinish: (result: { correctCount: number; total: number }) => void;
                         }`}
                     >
                         <div className="font-bold mb-2">{isCorrect ? "正解！" : "不正解"}</div>
-                        <div className="text-slate-200 explanation">{q.explanation || "この問題に解説は設定されていません。"}</div>
+                        <div className="text-slate-200 explanation max-40ch break-anywhere">{q.explanation || "この問題に解説は設定されていません。"}</div>
                         <div className="mt-4 flex justify-end">
                             <button
                                 onClick={handleNext}

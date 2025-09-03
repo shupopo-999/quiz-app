@@ -33,6 +33,17 @@
   .card { padding: 1.5rem; }
 }
 
+/* 20ch 幅に制限 */
+.max-20ch { max-width: 20ch; }
+
+/* どこでも折り返す（強力） */
+.break-anywhere {
+  overflow-wrap: anywhere;  /* 標準的な推奨 */
+  word-wrap: break-word;    /* 互換 */
+  word-break: break-word;   /* WebKit系の癖対策 */
+}
+
+
 /* タイトル画面のカードはやや細身 */
 .title-card {
   max-width: 36rem;
@@ -41,5 +52,6 @@
 /* 解説テキスト：\n 改行を反映＆行間を詰める */
 .explanation {
   white-space: pre-line;
+  line-height: 0.7;
   line-height: var(--lh-explanation);
 }
