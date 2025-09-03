@@ -367,7 +367,7 @@ export const QUESTION_BANK: Question[] = [
             { id: "q17o1", text: "chown student teacher testfile" },
             { id: "q17o2", text: "chown testfile student teacher" },
             { id: "q17o3", text: "chown teacher testfile" },
-            { id: "q17o4", text: "chown teacher testfile" },
+            { id: "q17o4", text: "chown -u 500 testfile" },
             { id: "q17o5", text: "chown testfile teacher" }
         ],
         correctOptionIds: ["q17o3"],
